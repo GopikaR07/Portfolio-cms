@@ -5,6 +5,8 @@ const projectRoutes = require("./src/routes/projectRoutes");
 const skillRoutes = require("./src/routes/skillRoutes");
 const aboutRoutes = require("./src/routes/aboutRoutes");
 const experienceRoutes = require("./src/routes/experienceRoutes");
+const blogRoutes = require("./src/routes/blogRoutes");
+
 
 require("dotenv").config();
 
@@ -15,6 +17,8 @@ app.use("/api/projects", projectRoutes);
 app.use("/api/skills", skillRoutes);
 app.use("/api/about", aboutRoutes);
 app.use("/api/experience", experienceRoutes);
+app.use("/api/blogs", blogRoutes);
+
 
 const PORT = process.env.PORT || 5000;
 
