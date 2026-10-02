@@ -8,6 +8,10 @@ const experienceRoutes = require("./src/routes/experienceRoutes");
 const blogRoutes = require("./src/routes/blogRoutes");
 const testimonialRoutes = require("./src/routes/testimonialRoutes");
 const serviceRoutes = require("./src/routes/serviceRoutes");
+const uploadRoutes = require("./src/routes/uploadRoutes");
+const messageRoutes = require("./src/routes/messageRoutes");
+
+
 
 
 require("dotenv").config();
@@ -22,7 +26,8 @@ app.use("/api/experience", experienceRoutes);
 app.use("/api/blogs", blogRoutes);
 app.use("/api/testimonials", testimonialRoutes);
 app.use("/api/services", serviceRoutes);
-
+app.use("/api/upload", uploadRoutes);
+app.use("/api/messages", messageRoutes);
 
 
 
