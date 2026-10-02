@@ -2,12 +2,16 @@ const express = require("express");
 const db = require("./src/config/db");
 const authRoutes = require("./src/routes/authRoutes");
 const projectRoutes = require("./src/routes/projectRoutes");
+const skillRoutes = require("./src/routes/skillRoutes");
+
 require("dotenv").config();
 
 const app = express();
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/projects", projectRoutes);
+app.use("/api/skills", skillRoutes);
+
 
 const PORT = process.env.PORT || 5000;
 
